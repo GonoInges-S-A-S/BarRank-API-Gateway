@@ -1,0 +1,11 @@
+api-gateway:
+  build: ./BarRank-API-Gateway
+  ports:
+    - "8080:8080"
+  depends_on:
+    - bares-service
+    - categorias-service
+    - imagenes-service
+    - resenas-service
+    - usuarios-service
+  restart: always

@@ -18,4 +18,9 @@ app.use('/api/imagenes', imagenesRoutes);
 app.use('/api/resenas', resenasRoutes);
 app.use('/api/usuarios', usuariosRoutes);
 
+app.use((err: any, req: any, res: any, next: any) => {
+  console.error('[Gateway Error]', err.message);
+  res.status(500).json({ error: 'Error en el API Gateway' });
+});
+
 export default app;

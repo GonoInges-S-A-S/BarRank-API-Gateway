@@ -54,6 +54,7 @@
     "has-symbols": "^1.1.0",
     "hasown": "^2.0.2",
     "http-errors": "^2.0.0",
+    "http-proxy-middleware": "^3.0.5",
     "iconv-lite": "^0.6.3",
     "inflight": "^1.0.6",
     "inherits": "^2.0.4",
@@ -133,6 +134,7 @@
   "devDependencies": {
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
+    "@types/http-proxy-middleware": "^0.19.3",
     "@types/node": "^22.15.30",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.8.3"
