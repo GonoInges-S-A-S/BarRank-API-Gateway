@@ -7,7 +7,7 @@ const router = Router();
 router.use(
   '/',
   createProxyMiddleware({
-    target: 'http://localhost:3001', // puerto del microservicio de bares
+    target: 'http://bares-service:3000', // puerto del microservicio de bares
     changeOrigin: true,
     pathRewrite: {
       '^/': '/api/bares', // 🔁 traduce la ruta a lo que el microservicio espera

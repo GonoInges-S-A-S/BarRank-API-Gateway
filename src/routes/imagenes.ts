@@ -7,7 +7,7 @@ const router = Router();
 router.use(
   '/',
   createProxyMiddleware({
-    target: 'http://localhost:3004', // puerto del microservicio de imagenesBares
+    target: 'http://imagenes-service:3000', // puerto del microservicio de imagenesBares
     changeOrigin: true,
     pathRewrite: {
       '^/': '/api/imagenes', // 🔁 traduce la ruta a lo que el microservicio espera

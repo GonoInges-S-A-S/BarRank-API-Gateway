@@ -1,11 +1,19 @@
-api-gateway:
-  build: ./BarRank-API-Gateway
-  ports:
-    - "8080:8080"
-  depends_on:
-    - bares-service
-    - categorias-service
-    - imagenes-service
-    - resenas-service
-    - usuarios-service
-  restart: always
+version: '3.8'
+
+services:
+  api-gateway:
+    build: .
+    container_name: api-gateway
+    ports:
+      - "8080:8080"
+    restart: always
+    environment:
+      - PORT=8080
+    networks:
+      - barrank-network  # 👈 Asignamos la red al servicio
+
+networks:
+  barrank-network:        # 👈 Definimos o conectamos a la red
+    external: true
+
+
